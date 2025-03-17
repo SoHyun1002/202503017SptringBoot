@@ -27,7 +27,7 @@
             <div class="success-icon">
                 <i class="bi bi-check-circle-fill"></i>
             </div>
-            <h2 class="mb-4">등록 성공!</h2>
+            <h2 class="mb-4">등록 성공123!</h2>
             <c:if test="${not empty message}">
                 <div class="alert alert-success">
                     ${message}

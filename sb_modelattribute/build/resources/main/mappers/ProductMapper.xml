@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.modelattribute.mapper.ProductMapper">
+
+    <!-- 상품 등록 -->
+    <insert id="insertProduct" parameterType="com.example.modelattribute.dto.ProductDTO">
+        INSERT INTO product (name, price, description, stock, category, image_url)
+        VALUES (#{name}, #{price}, #{description}, #{stock}, #{category}, #{imageUrl})
+    </insert>
+    
+    <!-- 상품 정보 수정 -->
+    <update id="updateProduct" parameterType="com.example.modelattribute.dto.ProductDTO">
+        UPDATE product
+        SET name = #{name},
+            price = #{price},
+            description = #{description},
+            stock = #{stock},
+            category = #{category},
+            image_url = #{imageUrl}
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 상품 삭제 -->
+    <delete id="deleteProduct" parameterType="long">
+        DELETE FROM product WHERE id = #{id}
+    </delete>
+    
+    <!-- 상품 ID로 조회 -->
+    <select id="selectProductById" parameterType="long" resultType="com.example.modelattribute.dto.ProductDTO">
+        SELECT id, name, price, description, stock, category, image_url as imageUrl, created_at as createdAt
+        FROM product
+        WHERE id = #{id}
+    </select>
+    
+    <!-- 상품명으로 조회 -->
+    <select id="selectProductsByName" parameterType="string" resultType="com.example.modelattribute.dto.ProductDTO">
+        SELECT id, name, price, description, stock, category, image_url as imageUrl, created_at as createdAt
+        FROM product
+        WHERE name LIKE CONCAT('%', #{name}, '%')
+    </select>
+    
+    <!-- 모든 상품 조회 -->
+    <select id="selectAllProducts" resultType="com.example.modelattribute.dto.ProductDTO">
+        SELECT id, name, price, description, stock, category, image_url as imageUrl, created_at as createdAt
+        FROM product
+        ORDER BY id
+    </select>
+    
+    <!-- 가격 범위로 상품 조회 -->
+    <select id="selectProductsByPriceRange" resultType="com.example.modelattribute.dto.ProductDTO">
+        SELECT id, name, price, description, stock, category, image_url as imageUrl, created_at as createdAt
+        FROM product
+        WHERE price BETWEEN #{param1} AND #{param2}
+        ORDER BY price
+    </select>
+    
+</mapper> 
