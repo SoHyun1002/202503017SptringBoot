@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>파일 목록</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/board.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+<div class="container">
+  <h2>파일 목록</h2>
+  <a href="/files/upload" class="btn">파일 업로드</a>
+  <table class="board-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>파일명</th>
+      <th>다운로드</th>
+      <th>삭제</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="file : ${files}">
+      <td th:text="${file.id}"></td>
+      <td th:text="${file.fileName}"></td>
+      <td><a th:href="@{/files/download/{id}(id=${file.id})}" class="btn">다운로드</a></td>
+      <td>
+        <form th:action="@{/files/delete/{id}(id=${file.id})}" method="post">
+          <button type="submit" class="btn">삭제</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 상세</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/board.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+<div class="container">
+  <h2>문제 상세</h2>
+  <p><strong>ID:</strong> <span th:text="${problem.id}"></span></p>
+  <p><strong>제목:</strong> <span th:text="${problem.title}"></span></p>
+  <p><strong>설명:</strong></p>
+  <p th:text="${problem.description}"></p>
+  <a href="/problems" class="btn">목록으로 돌아가기</a>
+</div>
+</body>
+</html>
