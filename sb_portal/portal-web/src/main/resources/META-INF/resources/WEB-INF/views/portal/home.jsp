@@ -498,6 +498,30 @@
                     <a href="http://localhost:8082/module2/" target="_blank" class="module-link">모듈 2 전체보기</a>
                 </div>
             </div>
+
+            <div class="module-wrapper">
+                <div class="module-header">
+                    <div class="module-header-bg" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="module-header-overlay">
+                        <div class="module-info">
+                            <div class="module-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h2 class="module-title">모듈 3</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <div class="loading" id="loading3">
+                        <i class="fas fa-spinner"></i>
+                        <p>로딩 중...</p>
+                    </div>
+                    <iframe src="http://localhost:8083/module3/" class="module-frame" id="module3Frame" onload="hideLoading('loading3')" scrolling="no"></iframe>
+                </div>
+                <div class="module-footer">
+                    <a href="http://localhost:8083/module3/" target="_blank" class="module-link">모듈 3 전체보기</a>
+                </div>
+            </div>
         </div>
     </div>
     

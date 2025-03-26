@@ -1,0 +1,8 @@
+rootProject.name = 'sb3-portal'
+
+include 'portal-common'
+include 'portal-web'
+include 'portal-module1'
+include 'portal-module2'
+include 'portal-module3'
+include 'portal-module4'

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 게시글 작성 폼 -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">새 게시글 작성</h5>
+            <form id="postForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="title" placeholder="제목" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="content" placeholder="내용" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="author" placeholder="작성자" required>
+                </div>
+                <button type="submit" class="btn btn-primary">게시하기</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // 게시글을 추가하는 함수
+        function addPost(event) {
+            event.preventDefault();  // 폼 제출을 방지 (페이지 리로드 방지)
+    
+            // 게시글을 추가하는 요청을 보냄
+            fetch('http://localhost:3000/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: document.getElementById('title').value,
+                    content: document.getElementById('content').value,
+                    author: document.getElementById('author').value
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 게시글 추가 성공 시 알림
+                alert('게시글이 성공적으로 추가되었습니다!');
+                // 폼 초기화
+                document.getElementById('postForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('게시글 추가에 실패했습니다.');
+            });
+        }
+    
+        // 폼 제출 시 addPost 함수 실행
+        document.getElementById('postForm').addEventListener('submit', addPost);
+    </script>
+    
+</body>
+</html>

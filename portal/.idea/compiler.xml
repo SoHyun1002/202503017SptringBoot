@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="portal" target="17" />
+      <module name="portal.main" target="17" />
+      <module name="portal.module-account" target="17" />
+      <module name="portal.module-account.main" target="17" />
+      <module name="portal.module-account.test" target="17" />
+      <module name="portal.module-board" target="17" />
+      <module name="portal.module-board.main" target="17" />
+      <module name="portal.module-board.test" target="17" />
+      <module name="portal.module-common" target="17" />
+      <module name="portal.module-common.main" target="17" />
+      <module name="portal.module-common.test" target="17" />
+      <module name="portal.module-webmain" target="17" />
+      <module name="portal.module-webmain.main" target="17" />
+      <module name="portal.module-webmain.test" target="17" />
+      <module name="portal.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

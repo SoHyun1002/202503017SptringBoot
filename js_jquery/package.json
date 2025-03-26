@@ -1,0 +1,13 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "CRUD application with json-server",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000",
+    "dev": "live-server --port=5500"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "jquery-ajax-demo",
+  "version": "1.0.0",
+  "description": "jQuery AJAX 데모",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "live-server --port=5500 --no-browser"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2"
+  }
+} 

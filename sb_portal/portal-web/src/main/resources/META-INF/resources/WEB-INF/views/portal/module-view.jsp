@@ -217,6 +217,7 @@
                     <a href="/" class="nav-link">홈</a>
                     <a href="/module1" class="nav-link ${moduleName == '모듈 1' ? 'active' : ''}">모듈 1</a>
                     <a href="/module2" class="nav-link ${moduleName == '모듈 2' ? 'active' : ''}">모듈 2</a>
+                    <a href="/module3" class="nav-link ${moduleName == '모듈 3' ? 'active' : ''}">모듈 3</a>
                 </div>
             </div>
         </div>
@@ -242,6 +243,7 @@
                     <a href="/">홈</a>
                     <a href="/module1">모듈 1</a>
                     <a href="/module2">모듈 2</a>
+                    <a href="/module3">모듈 3</a>
                 </div>
                 <div class="copyright">
                     <p>&copy; 2023 ${portalName}. All rights reserved.</p>

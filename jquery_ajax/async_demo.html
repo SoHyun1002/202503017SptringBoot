@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 비동기 작업 데모</title>
+    <link rel="stylesheet" href="async_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery 비동기 작업 데모</h1>
+        
+        <div class="demo-section">
+            <div class="control-panel">
+                <button id="startDemo" class="btn">작업 시작</button>
+                <button id="resetDemo" class="btn btn-reset">초기화</button>
+            </div>
+
+            <div class="tasks-container">
+                <div class="task-box">
+                    <h3>작업 1</h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress1"></div>
+                    </div>
+                    <div class="status" id="status1">대기 중...</div>
+                </div>
+
+                <div class="task-box">
+                    <h3>작업 2</h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress2"></div>
+                    </div>
+                    <div class="status" id="status2">대기 중...</div>
+                </div>
+
+                <div class="task-box">
+                    <h3>작업 3</h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress3"></div>
+                    </div>
+                    <div class="status" id="status3">대기 중...</div>
+                </div>
+            </div>
+
+            <div class="result-panel">
+                <h3>작업 결과</h3>
+                <div id="result" class="result-box">
+                    작업을 시작해주세요...
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>비동기 작업의 특징</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h4>동시 실행</h4>
+                    <p>여러 작업이 동시에 진행됩니다</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h4>비동기 처리</h4>
+                    <p>각 작업이 독립적으로 실행됩니다</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <h4>다양한 시간</h4>
+                    <p>각 작업마다 다른 소요 시간</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="async_script.js"></script>
+</body>
+</html> 

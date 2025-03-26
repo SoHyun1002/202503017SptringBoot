@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX 예제</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery AJAX 예제</h1>
+        
+        <div class="ajax-demo">
+            <div class="control-panel">
+                <button id="getData" class="btn">데이터 가져오기 (GET)</button>
+                <button id="postData" class="btn">데이터 보내기 (POST)</button>
+                <button id="deleteData" class="btn btn-danger">메시지 삭제 (DELETE)</button>
+            </div>
+            
+            <div class="result-panel">
+                <h2>결과</h2>
+                <div id="result" class="result-box">
+                    여기에 결과가 표시됩니다...
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>AJAX 동작 방식</h2>
+            <div class="flow-diagram">
+                <div class="step">1. 버튼 클릭</div>
+                <div class="arrow">→</div>
+                <div class="step">2. AJAX 요청</div>
+                <div class="arrow">→</div>
+                <div class="step">3. 서버 응답</div>
+                <div class="arrow">→</div>
+                <div class="step">4. 결과 표시</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

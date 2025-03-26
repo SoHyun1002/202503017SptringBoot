@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 게시글 목록 -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">게시글 목록</h5>
+            <div id="postsList"></div>
+        </div>
+    </div>
+    <script>
+        // 게시글 목록을 가져오는 함수
+        function getPosts() {
+            // 게시글 목록을 가져오는 요청을 보냄
+            fetch('http://localhost:3000/posts')
+                .then(response => response.json())
+                .then(data => {
+                    // 게시글 목록을 가져오는 데 성공하면 postsList에 게시글 목록을 추가
+                    const postsList = document.getElementById('postsList');
+                    data.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.innerHTML = `
+                            <h6>${post.title}</h6>
+                            <p>${post.content}</p>
+                        `;
+                        postsList.appendChild(postElement);
+                    });
+                });
+        }
+        // getPosts 함수를 호출하여 게시글 목록을 가져옴
+        getPosts();
+    </script>
+</body>
+</html>

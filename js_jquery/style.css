@@ -1,0 +1,23 @@
+.post-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.post-item:hover {
+    background-color: #f8f9fa;
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.edit-form {
+    display: none;
+    margin-top: 10px;
+}
+
+textarea {
+    min-height: 100px;
+} 

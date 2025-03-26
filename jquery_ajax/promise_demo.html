@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 기초 이해하기</title>
+    <link rel="stylesheet" href="promise_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Promise 기초 이해하기</h1>
+        
+        <div class="demo-section">
+            <div class="control-panel">
+                <button id="startPromise" class="btn">Promise 시작</button>
+                <button id="resetDemo" class="btn btn-reset">초기화</button>
+            </div>
+
+            <div class="promise-flow">
+                <div class="step-box pending">
+                    <div class="step-icon">⏳</div>
+                    <h3>Pending</h3>
+                    <p>대기 중</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step-box resolved">
+                    <div class="step-icon">✅</div>
+                    <h3>Resolved</h3>
+                    <p>성공</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step-box rejected">
+                    <div class="step-icon">❌</div>
+                    <h3>Rejected</h3>
+                    <p>실패</p>
+                </div>
+            </div>
+
+            <div class="code-example">
+                <pre><code>const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise가 성공적으로 완료되었습니다!');
+    }, 2000);
+});
+
+promise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.error(error);
+    });</code></pre>
+            </div>
+
+            <div class="result-panel">
+                <h3>실행 결과</h3>
+                <div class="result-box"></div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>Promise의 주요 특징</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h4>비동기 처리</h4>
+                    <p>시간이 걸리는 작업을 효율적으로 처리할 수 있습니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⛓️</div>
+                    <h4>체이닝</h4>
+                    <p>then() 메서드를 연속해서 사용할 수 있습니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h4>상태 관리</h4>
+                    <p>작업의 진행 상태를 명확하게 추적할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="promise_script.js"></script>
+</body>
+</html> 

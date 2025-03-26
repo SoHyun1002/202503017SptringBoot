@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 기초 학습</title>
+    <link rel="stylesheet" href="jquery_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery 기초 학습</h1>
+
+        <div class="demo-section">
+            <h2>1. 요소 선택과 조작</h2>
+            <div class="demo-box">
+                <div class="control-panel">
+                    <button id="showHide" class="btn">보이기/숨기기</button>
+                    <button id="changeColor" class="btn">색상 변경</button>
+                    <button id="addText" class="btn">텍스트 추가</button>
+                </div>
+                <div class="target-box">
+                    <p>이 요소를 조작해보세요!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>2. 애니메이션 효과</h2>
+            <div class="demo-box">
+                <div class="control-panel">
+                    <button id="fadeInOut" class="btn">페이드 인/아웃</button>
+                    <button id="slideToggle" class="btn">슬라이드 토글</button>
+                    <button id="animate" class="btn">애니메이션</button>
+                </div>
+                <div class="animation-box">
+                    <div class="animated-element"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>3. 이벤트 처리</h2>
+            <div class="demo-box">
+                <div class="event-box">
+                    <div class="mouse-area">
+                        <p>마우스를 움직여보세요</p>
+                        <div class="coordinates">X: 0, Y: 0</div>
+                    </div>
+                    <div class="key-area">
+                        <p>키를 입력해보세요</p>
+                        <div class="key-info">입력된 키: </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>4. AJAX 요청</h2>
+            <div class="demo-box">
+                <div class="control-panel">
+                    <button id="loadData" class="btn">데이터 불러오기</button>
+                </div>
+                <div class="ajax-result">
+                    <p>여기에 데이터가 표시됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>jQuery의 주요 기능</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h4>요소 선택</h4>
+                    <p>CSS 선택자를 사용하여 요소를 쉽게 선택할 수 있습니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h4>DOM 조작</h4>
+                    <p>요소의 내용, 스타일, 속성을 쉽게 변경할 수 있습니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h4>애니메이션</h4>
+                    <p>다양한 애니메이션 효과를 쉽게 적용할 수 있습니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h4>AJAX</h4>
+                    <p>서버와의 비동기 통신을 쉽게 구현할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery_script.js"></script>
+</body>
+</html> 
